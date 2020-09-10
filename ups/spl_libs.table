@@ -1,0 +1,31 @@
+setupRequired(dax_apdb)
+setupRequired(psfex)
+setupRequired(shapelet)
+setupRequired(synpipe)
+setupRequired(obs_test)
+
+envPrepend(PATH, ${PRODUCT_DIR}/bin)
+envPrepend(LD_LIBRARY_PATH, ${PRODUCT_DIR}/lib)
+envPrepend(DYLD_LIBRARY_PATH, ${PRODUCT_DIR}/lib)
+envPrepend(LSST_LIBRARY_PATH, ${PRODUCT_DIR}/lib)
+envPrepend(PYTHONPATH, ${PRODUCT_DIR}/python)
+
+# meas_algorithms           -- indirectly resolved via meas_deblender - ip_diffim and pipe_tasks
+# meas_base                 -- indirectly resolved via ip_diffim and pipe_tasks
+# meas_deblender            -- indirectly resolved via ip_diffim
+# pipe_base                 -- indirectly resolved via ip_diffim and obs_base and pipe_tasks
+# verify                    -- indirectly resolved via ip_diffim
+# astro_metadata_translator -- indirectly resolved via obs_base
+# skymap                    -- indirectly resolved via obs_base
+# obs_base                  -- indirectly resolved via pipe_tasks
+# pipe_tasks                -- indirectly resolved via synpipe
+# ip_diffim                 -- indirectly resolved via pipe_tasks
+# ip_isr                    -- indirectly resolved via pipe_tasks
+# coadd_utils               -- indirectly resolved via pipe_tasks
+# meas_extensions_scarlet   -- indirectly resolved via pipe_tasks
+# scarlet                  3rd indirectly resolved via pipe_tasks - meas_extensions_scarlet
+# kht                      3rd indirectly resolved via pipe_tasks
+# obs_test_data             -- indirectly resolved via obs_test
+# verify_metrics            -- indirectly resolved via verify
+# proxmin                   -- inderectly resolved via scarlet
+# eigen                     -- indirectly resolved via kht
