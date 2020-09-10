@@ -27,5 +27,5 @@ envPrepend(PYTHONPATH, ${PRODUCT_DIR}/python)
 # kht                      3rd indirectly resolved via pipe_tasks
 # obs_test_data             -- indirectly resolved via obs_test
 # verify_metrics            -- indirectly resolved via verify
-# proxmin                   -- inderectly resolved via scarlet
-# eigen                     -- indirectly resolved via kht
+# proxmin                  3rd inderectly resolved via scarlet
+# eigen                    ?-- indirectly resolved via kht
