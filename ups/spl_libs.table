@@ -3,6 +3,7 @@ setupRequired(psfex)
 setupRequired(shapelet)
 setupRequired(synpipe)
 setupRequired(obs_test)
+setupRequired(obs_lsst)
 
 envPrepend(PATH, ${PRODUCT_DIR}/bin)
 envPrepend(LD_LIBRARY_PATH, ${PRODUCT_DIR}/lib)
@@ -29,3 +30,4 @@ envPrepend(PYTHONPATH, ${PRODUCT_DIR}/python)
 # verify_metrics            -- indirectly resolved via verify
 # proxmin                  3rd inderectly resolved via scarlet
 # eigen                    ?-- indirectly resolved via kht
+# obs_lsst_data             -- indirectly resolved via obs_lsst
