@@ -24,7 +24,8 @@ envPrepend(PYTHONPATH, ${PRODUCT_DIR}/python)
 # ip_isr                    -- indirectly resolved via pipe_tasks
 # coadd_utils               -- indirectly resolved via pipe_tasks
 # meas_extensions_scarlet   -- indirectly resolved via pipe_tasks
-# scarlet                  3rd indirectly resolved via pipe_tasks - meas_extensions_scarlet
+# scarlet                  3rd indirectly resolved via pipe_tasks - meas_extensions_scarlet; scarlet_extensions
+# scarlet_extensions        -- indirectly resolved via pipe-yasks - meas_extensions_scarlet
 # kht                      3rd indirectly resolved via pipe_tasks
 # obs_test_data             -- indirectly resolved via obs_test
 # verify_metrics            -- indirectly resolved via verify
