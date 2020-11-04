@@ -1,5 +1,4 @@
 setupRequired(dax_apdb)
-setupRequired(psfex)
 setupRequired(shapelet)
 setupRequired(synpipe)
 setupRequired(obs_test)
@@ -11,10 +10,10 @@ envPrepend(DYLD_LIBRARY_PATH, ${PRODUCT_DIR}/lib)
 envPrepend(LSST_LIBRARY_PATH, ${PRODUCT_DIR}/lib)
 envPrepend(PYTHONPATH, ${PRODUCT_DIR}/python)
 
-# meas_algorithms           -- indirectly resolved via meas_deblender - ip_diffim and pipe_tasks
+# meas_algorithms           -- indirectly resolved via meas_deblender - ip_diffim and pipe_tasks and meas_extensions_psfex
 # meas_base                 -- indirectly resolved via ip_diffim and pipe_tasks
 # meas_deblender            -- indirectly resolved via ip_diffim
-# pipe_base                 -- indirectly resolved via ip_diffim and obs_base and pipe_tasks
+# pipe_base                 -- indirectly resolved via ip_diffim and obs_base and pipe_tasks and meas_extensions_psfex
 # verify                    -- indirectly resolved via ip_diffim
 # astro_metadata_translator -- indirectly resolved via obs_base
 # skymap                    -- indirectly resolved via obs_base
@@ -32,3 +31,5 @@ envPrepend(PYTHONPATH, ${PRODUCT_DIR}/python)
 # proxmin                  3rd inderectly resolved via scarlet
 # eigen                    ?-- indirectly resolved via kht
 # obs_lsst_data             -- indirectly resolved via obs_lsst
+# meas_extensions_psfex     -- indirectly resolved via pipe_tasks
+# psfex                     -- indirectly resolved via meas_extensions_psfex - pipe_taks
